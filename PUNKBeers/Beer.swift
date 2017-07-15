@@ -15,9 +15,9 @@ class Beer {
     var description : String
     var image: String
     var abv: Double
-    var ibu: Double
+    var ibu: Int
     
-    init (name: String, tagline: String, description: String, image: String, abv:Double, ibu:Double){
+    init (name: String, tagline: String, description: String, image: String, abv:Double, ibu:Int){
         self.name = name
         self.tagline = tagline
         self.description = description

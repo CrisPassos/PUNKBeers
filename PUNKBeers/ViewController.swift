@@ -10,14 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblTagline: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblAbc: UILabel!
+    @IBOutlet weak var lblIbu: UILabel!
+    @IBOutlet weak var ivImage: UIImageView!
+    
+    var beer: Beer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if beer != nil {
+            lblName.text = beer.name
+            lblTagline.text = beer.tagline
+            lblDescription.text = beer.description
+            lblAbc.text = "\(beer.abv)"
+            lblIbu.text = "\(beer.ibu)"
+            //ivImage.image = beer.image as? UIImage
+            title = beer.name
+        }
+      
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

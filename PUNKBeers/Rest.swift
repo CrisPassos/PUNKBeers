@@ -5,7 +5,7 @@
 //  Created by Cristiana  Passos on 15/07/17.
 //  Copyright © 2017 Cristiana. All rights reserved.
 //
-
+import UIKit
 import Foundation
 
 class Rest {
@@ -59,11 +59,11 @@ class Rest {
                         let tagline = item["tagline"] as! String
                         let description = item["description"] as! String
                         let abv = item["abv"] as! Double
-                        let ibu = item["ibu"] as! Double
+                        //let ibu = item["ibu"] as! Int
                         let image = item["image_url"] as! String
                         let id = item["id"] as! Int
                         
-                        let beer = Beer(name: name, tagline: tagline, description: description, image: image, abv: abv, ibu:ibu )
+                        let beer = Beer(name: name, tagline: tagline, description: description, image: image, abv: abv, ibu:0 )
                         beer.id = id
                         beers.append(beer)
                     }
@@ -74,6 +74,23 @@ class Rest {
                 }
             }
             }.resume()
+    }
+    
+    static func downloadImage(url: String, onComplete: @escaping (UIImage?) -> Void){
+        guard let url = URL(string: url) else{
+            onComplete(nil)
+            return
+        }
+        
+        session.downloadTask(with: url, completionHandler: { (url: URL?, response: URLResponse?, error: Error?) in
+            if let response = response as? HTTPURLResponse, response.statusCode == 200, let url = url {
+                let imageData = try! Data(contentsOf: url)
+                let image = UIImage(data: imageData)
+                onComplete(image)
+            } else {
+                onComplete(nil)
+            }
+        }).resume()
     }
 
     

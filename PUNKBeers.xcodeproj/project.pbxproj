@@ -14,6 +14,7 @@
 		11D32CD91F1AB42E00694CC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D32CD71F1AB42E00694CC7 /* LaunchScreen.storyboard */; };
 		11D32CE11F1AB57400694CC7 /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D32CE01F1AB57400694CC7 /* Rest.swift */; };
 		11D32CE31F1AB64900694CC7 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D32CE21F1AB64900694CC7 /* Beer.swift */; };
+		11D32CE91F1ABD2200694CC7 /* BeersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D32CE81F1ABD2200694CC7 /* BeersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		11D32CDA1F1AB42E00694CC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11D32CE01F1AB57400694CC7 /* Rest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
 		11D32CE21F1AB64900694CC7 /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		11D32CE81F1ABD2200694CC7 /* BeersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeersTableViewController.swift; path = ../BeersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		11D32CCD1F1AB42D00694CC7 /* PUNKBeers */ = {
 			isa = PBXGroup;
 			children = (
+				11D32CE81F1ABD2200694CC7 /* BeersTableViewController.swift */,
 				11D32CCE1F1AB42E00694CC7 /* AppDelegate.swift */,
 				11D32CD01F1AB42E00694CC7 /* ViewController.swift */,
 				11D32CD21F1AB42E00694CC7 /* Main.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				11D32CE11F1AB57400694CC7 /* Rest.swift in Sources */,
 				11D32CD11F1AB42E00694CC7 /* ViewController.swift in Sources */,
+				11D32CE91F1ABD2200694CC7 /* BeersTableViewController.swift in Sources */,
 				11D32CCF1F1AB42E00694CC7 /* AppDelegate.swift in Sources */,
 				11D32CE31F1AB64900694CC7 /* Beer.swift in Sources */,
 			);
