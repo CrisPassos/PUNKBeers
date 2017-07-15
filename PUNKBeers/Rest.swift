@@ -59,11 +59,11 @@ class Rest {
                         let tagline = item["tagline"] as! String
                         let description = item["description"] as! String
                         let abv = item["abv"] as! Double
-                        //let ibu = item["ibu"] as! Int
+                        let ibu = item["ibu"] as? Int == nil ? 0 : item["ibu"] as! Int
                         let image = item["image_url"] as! String
                         let id = item["id"] as! Int
                         
-                        let beer = Beer(name: name, tagline: tagline, description: description, image: image, abv: abv, ibu:0 )
+                        let beer = Beer(name: name, tagline: tagline, description: description, image: image, abv: abv, ibu:ibu )
                         beer.id = id
                         beers.append(beer)
                     }

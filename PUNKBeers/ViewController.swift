@@ -28,8 +28,13 @@ class ViewController: UIViewController {
             lblDescription.text = beer.description
             lblAbc.text = "\(beer.abv)"
             lblIbu.text = "\(beer.ibu)"
-            //ivImage.image = beer.image as? UIImage
             title = beer.name
+            
+            Rest.downloadImage(url: beer.image) {(image: UIImage?) in
+                DispatchQueue.main.async {
+                    self.ivImage.image = image
+                }
+            }
         }
       
     }

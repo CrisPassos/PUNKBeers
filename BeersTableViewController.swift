@@ -40,7 +40,12 @@ class BeersTableViewController: UITableViewController {
         let beer = dataSource[indexPath.row]
         cell.textLabel?.text = beer.name
         cell.detailTextLabel?.text = "Teor alcoólico: \(beer.abv)"
-        //cell.imageView?.image = beer.image as? UIImage
+        
+        Rest.downloadImage(url: beer.image) {(image: UIImage?) in
+            DispatchQueue.main.async {
+                cell.imageView?.image = image
+            }
+        }
         
         return cell
     }
